@@ -1,26 +1,99 @@
-@import "tailwindcss";
+/* stylelint-disable */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 39 35% 85%;
+    --foreground: 39 19% 30%;
+    --card: 39 36% 87%;
+    --card-foreground: 39 19% 30%;
+    --popover: 39 56% 92%;
+    --popover-foreground: 39 19% 30%;
+    --primary: 79 34% 46%;
+    --primary-foreground: 39 67% 98%;
+    --secondary: 44 48% 81%;
+    --secondary-foreground: 39 19% 30%;
+    --muted: 44 48% 81%;
+    --muted-foreground: 39 14% 50%;
+    --accent: 44 50% 77%;
+    --accent-foreground: 39 19% 30%;
+    --destructive: 8 55% 67%;
+    --destructive-foreground: 38 56% 97%;
+    --border: 29 25% 60%;
+    --input: 44 50% 77%;
+    --ring: 81 22% 59%;
+    --radius: 0.425rem;
+    --chart-1: 81 22% 59%;
+    --chart-2: 81 16% 55%;
+    --chart-3: 98 17% 75%;
+    --chart-4: 81 13% 48%;
+    --chart-5: 81 12% 42%;
+    --sidebar: 44 51% 82%;
+    --sidebar-foreground: 39 19% 30%;
+    --sidebar-primary: 81 22% 59%;
+    --sidebar-primary-foreground: 39 67% 98%;
+    --sidebar-accent: 42 33% 91%;
+    --sidebar-accent-foreground: 39 19% 30%;
+    --sidebar-border: 45 25% 93%;
+    --sidebar-ring: 81 22% 59%;
+    --font-sans: "Merriweather", serif;
+    --font-serif: "Source Serif 4", serif;
+    --font-mono: "JetBrains Mono", monospace;
+    --shadow-2xs: 3px 3px 2px 0px hsl(88 22% 35% / 0.07);
+    --shadow-xs: 3px 3px 2px 0px hsl(88 22% 35% / 0.07);
+    --shadow-sm: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 1px 2px -1px hsl(88 22% 35% / 0.15);
+    --shadow: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 1px 2px -1px hsl(88 22% 35% / 0.15);
+    --shadow-md: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 2px 4px -1px hsl(88 22% 35% / 0.15);
+    --shadow-lg: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 4px 6px -1px hsl(88 22% 35% / 0.15);
+    --shadow-xl: 3px 3px 2px 0px hsl(88 22% 35% / 0.15), 3px 8px 10px -1px hsl(88 22% 35% / 0.15);
+    --shadow-2xl: 3px 3px 2px 0px hsl(88 22% 35% / 0.38);
+  }
+
+  .dark {
+    --background: 39 13% 20%;
+    --foreground: 39 33% 91%;
+    --card: 39 10% 23%;
+    --card-foreground: 39 33% 91%;
+    --popover: 39 10% 23%;
+    --popover-foreground: 39 33% 91%;
+    --primary: 81 16% 55%;
+    --primary-foreground: 39 13% 15%;
+    --secondary: 39 11% 31%;
+    --secondary-foreground: 39 33% 91%;
+    --muted: 39 10% 26%;
+    --muted-foreground: 39 12% 64%;
+    --accent: 44 29% 50%;
+    --accent-foreground: 39 13% 15%;
+    --destructive: 8 34% 56%;
+    --destructive-foreground: 39 38% 93%;
+    --border: 39 11% 31%;
+    --input: 39 11% 31%;
+    --ring: 81 16% 55%;
+    --chart-1: 81 16% 55%;
+    --chart-2: 81 22% 59%;
+    --chart-3: 81 13% 48%;
+    --chart-4: 44 29% 50%;
+    --chart-5: 81 12% 42%;
+    --sidebar: 39 13% 20%;
+    --sidebar-foreground: 39 33% 91%;
+    --sidebar-primary: 81 16% 55%;
+    --sidebar-primary-foreground: 39 13% 15%;
+    --sidebar-accent: 44 29% 50%;
+    --sidebar-accent-foreground: 39 13% 15%;
+    --sidebar-border: 39 11% 31%;
+    --sidebar-ring: 81 16% 55%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
