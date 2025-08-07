@@ -2,6 +2,10 @@
 
 A modern, fast, and user-friendly image compression tool built with Next.js. Compress your images to specific file sizes while maintaining quality and optimizing for web performance.
 
+![1](https://github.com/user-attachments/assets/f2c031ec-5a61-46d5-a7a9-b01249f48ef2)
+![2](https://github.com/user-attachments/assets/96cd79b4-1ca7-46ef-859e-efae8bb9c33e)
+![3](https://github.com/user-attachments/assets/faa9065e-c335-4d8c-8c2c-5b74f11789ba)
+
 ## ✨ Features
 
 ### 🎯 **Smart Image Compression**
